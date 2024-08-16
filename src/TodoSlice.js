@@ -27,9 +27,9 @@ const todoSlice = createSlice({
 
       reducer(state, action) {
         const todo = state.find((todo) => todo.id === action.payload.id);
-        if (todo) {
+        if (todo && action.payload.text) {
           todo.text = action.payload.text;
-        }
+        } else toast.error("Provide a new todo");
       },
     },
   },

@@ -28,7 +28,7 @@ function RemoveTodo({ todo }) {
           border="1px solid"
           borderColor="gray.200"
           _hover={{ bg: "gray.100" }}
-          boxShadow="sm"
+          boxShadow="md"
         >
           <Text fontSize="lg" flex="1">
             {todos.text}
@@ -41,7 +41,7 @@ function RemoveTodo({ todo }) {
               leftIcon={<FaTrash />}
               mr={2}
               variant="outline"
-              _hover={{ bg: "red.50" }}
+              _hover={{ bg: "red.100" }}
             >
               Remove
             </Button>

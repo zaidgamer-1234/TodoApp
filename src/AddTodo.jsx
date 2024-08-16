@@ -6,6 +6,11 @@ import { addTodo } from "./TodoSlice";
 function AddTodo({ todo, setTodo }) {
   const dispatch = useDispatch();
 
+  const handleAddTodo = () => {
+    dispatch(addTodo(todo));
+    setTodo("");
+  };
+
   return (
     <Flex
       align="center"
@@ -27,7 +32,7 @@ function AddTodo({ todo, setTodo }) {
         _focus={{ borderColor: "teal.600", boxShadow: "0 0 0 1px teal.600" }}
       />
       <Button
-        onClick={() => dispatch(addTodo(todo))}
+        onClick={handleAddTodo}
         colorScheme="teal"
         size="lg"
         leftIcon={<FaPlus />}
